@@ -1,4 +1,21 @@
 .nav {
-    height: 300px;
-    background: #fca311;
+    height: 50px;
+    background: #434343;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.narutoLogo{
+    background-image: url(../../../src/images/naruto.png);
+    height: 30px;
+    width: 30px;
+    background-size: contain;
+    display: inline-block;
+    background-repeat: no-repeat;
+}
+
+.helpText{
+    color: white;
 }

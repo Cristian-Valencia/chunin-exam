@@ -1,10 +1,12 @@
 import React from "react";
+import WelcomePage from "./welcomePage/welcomePage.component";
+
 
 function Pages() {
     return (
-        <di>
-            <h1>This is page</h1>
-        </di>
+        <div>
+            <WelcomePage/>
+        </div>
     )
 }
 

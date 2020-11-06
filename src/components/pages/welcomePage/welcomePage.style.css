@@ -1,0 +1,33 @@
+.welcomeTitle{
+    font-size: 46px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.welcomeImage {
+    animation: pipo 5s;
+}
+
+
+  @keyframes pipo {
+    0% {
+        /* transform: translateY(0); */
+        opacity: 0;
+    }
+
+    100% {
+        /* transform: translateY(-100px);*/
+        opacity: 1; 
+    }
+  }
+  
+.startButton{
+    position: absolute;
+    top:69%;
+    left: 41%;
+}
+
+.welcomeContainer{
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}

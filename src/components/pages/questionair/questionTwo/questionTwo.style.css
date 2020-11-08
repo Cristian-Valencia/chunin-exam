@@ -1,0 +1,57 @@
+.questionOneContainer{
+    /* background-image: url("../../../../images/questionOneBackground.png");
+    background-size: contain;
+    background-repeat: no-repeat;*/
+    background-color:#4B4453 ;
+    padding: 30px;
+    position: relative;
+    padding-bottom: 216px;
+    overflow: hidden;
+}
+
+.question{
+    font-size: 30px;
+    background-color: #FF8066 ;
+    color: white;
+    padding: 20px;
+}
+
+.answers{
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.theAnswers{
+    padding: 30px;
+    background-color: white;
+    margin: 10px 0;
+}
+
+.theAnswers a{
+    color: black;
+}
+
+.pain{
+    background-image: url("./../../../../images/pain.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 238px;
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    right: -61px;
+    animation: pain 1s ;
+}
+
+@keyframes pain {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+  }
+  

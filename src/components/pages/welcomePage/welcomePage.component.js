@@ -1,6 +1,7 @@
 import React from "react";
 import welcomeImage from './../../../images/narutoWelcomPage.png';
 import './welcomePage.style.css';
+import { Link } from 'react-router-dom';
 
 
 function WelcomePage() {
@@ -13,7 +14,9 @@ function WelcomePage() {
 
             <img src={welcomeImage} alt="Welcome Page Image" className="welcomeImage"/>
 
-            <button className="startButton">START</button>
+            <Link to="/questionOne">
+                <button className="startButton">START</button>
+            </Link>
 
         </div>
     )

@@ -23,7 +23,11 @@
 .startButton{
     position: absolute;
     top:69%;
-    left: 41%;
+    left: 34%;
+    font-size: 40px;
+    color: white;
+    background: #CE3E2B;
+    padding: 15px;
 }
 
 .welcomeContainer{

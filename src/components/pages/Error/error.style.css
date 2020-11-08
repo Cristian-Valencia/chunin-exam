@@ -1,0 +1,21 @@
+.errorContainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.errorBackgroundImage{
+    background-image: url(../../../images/dead.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    opacity: 0.5;
+    width: 100%;
+}
+
+.errorTitle{
+    font-size: 50px;
+    color: red;
+    position: absolute;
+}

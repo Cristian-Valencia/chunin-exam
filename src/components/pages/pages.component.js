@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
  import WelcomePage from "./welcomePage/welcomePage.component";
 import QuestionOne from "./questionair/questionOne/questionOne.component"
 import QuestionTwo from "./questionair/questionTwo/questionTwo.component"
@@ -8,6 +8,10 @@ import Error from "./Error/error.component";
 
 
 function Pages() {
+
+    const [name, setName] = useState(""); 
+    const [village, setVillage] = useState("");
+    
     return (
         <div>
             {/* 
@@ -20,7 +24,7 @@ function Pages() {
             <Switch>
           
                 <Route exact path="/">
-                    <WelcomePage/>
+                    <WelcomePage setName={setName} setVillage={setVillage}/>
                 </Route>
                 <Route exact path="/questionOne">
                     <QuestionOne />
@@ -31,7 +35,7 @@ function Pages() {
                 </Route>
 
                 <Route exact path="/result">
-                    <Result />
+                    <Result name={name} village={village} />
                 </Route>
 
                 <Route exact path="/*">

@@ -1,0 +1,51 @@
+.registrationForm{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    background-image: url('../../../images/scrollPaperBackground.jpg');
+    background-size: cover;
+    padding:  40px 20px;
+    /* in questo modo riusciamo a mettere al centro del div genitore
+    per creare un pop up e deve essere al centro del div relativo usare questo codice */
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.underlay{
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.registrationTitle{
+    margin: 10px 0 30px 0;
+    font-size: 30px;
+}
+
+.inputStyle{
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    border: none;
+}
+
+.registrationButton{
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: rgb(48, 48, 48);
+    color: white;
+    font-size: 22px;
+}

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import NameFormModal from './../nameFormModal/nameFormModal.component';
 
 
-function WelcomePage(props) {
+const WelcomePage = (props) => {
     // 
     const [showPopUp,setPopUp]= useState(true);
 
@@ -18,6 +18,9 @@ function WelcomePage(props) {
                 showPopUp === true
                 ?
                 <>
+
+                {/* così si passa una proprietà ad un'altra proprietà: da un componente ad un altro componente */}
+
                 <NameFormModal setPopUp={setPopUp} setName={props.setName} setVillage={props.setVillage} />
 
                 <div className="welcomeContainer">

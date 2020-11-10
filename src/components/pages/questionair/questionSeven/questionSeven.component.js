@@ -1,23 +1,22 @@
 import React from "react";
-import './questionTwo.style.css';
+import './questionSeven.style.css';
+import { Link } from 'react-router-dom';
 import AnswerButton from '../../../userInterface/answersButton/answerButton.component';
+import Imagine from '../../../userInterface/imagine/imagine.component';
 import Question from "../../../userInterface/question/question.component";
-import Imagine from "../../../userInterface/imagine/imagine.component";
-import imageTwo from "../../../../images/madara.png";
 
-const QuestionTwo = () => {
+const QuestionSeven = () => {
 
-    const path = '/questionThree'
-
-    const question = "who is the impostor?"
-    const answerA = "Sasori";
-    const answerB = "Madara";
-    const answerC = "Tobi";
-    const answerD = "Deidara";
-
+    const path = "/questionEight";
+    const question = "This is Question 7?"
+    const answerA = "Naruto";
+    const answerB = "Saukura";
+    const answerC = "Sasuke";
+    const answerD = "Kakashi";
+    
 
     return(
-        <div className="questionTwoContainer">
+        <div className="questionOneContainer">
             <Question question={question} />
             <div className="answers">
                 <AnswerButton path={path} answer={answerA} />
@@ -26,10 +25,10 @@ const QuestionTwo = () => {
                 <AnswerButton path={path} answer={answerD} />
             </div>
 
-            <Imagine imagine={imageTwo} />
+            <Imagine />
         </div>
     )
     
 }
 
-export default QuestionTwo;
+export default QuestionSeven;

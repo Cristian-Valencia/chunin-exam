@@ -2,7 +2,7 @@ import React from "react";
 import'./result.css';
 import madaraImage from'../../../images/madara.png';
 
-function Result(props) {
+const Result = (props) => {
     return(
         <div className="resultContainer">
             <div className="resultTitle">

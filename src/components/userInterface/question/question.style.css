@@ -1,0 +1,9 @@
+.questionContainer{
+    font-size: 30px;
+    background-color: #FF8066 ;
+    color: white;
+    padding: 20px;
+    width:100%;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}

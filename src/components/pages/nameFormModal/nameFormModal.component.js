@@ -15,8 +15,10 @@ const NameFormModal = (props) => {
 
                 <h1 className="registrationTitle">Registration Form</h1> 
                     
+                <label for="Name" className="label">Name:</label>
                 <input placeholder="Name" className="inputStyle" onChange={(e) => props.setName(e.target.value)}></input>
-                    
+                
+                <label for="Village" className="label">Village:</label>
                 <input placeholder="Village" className="inputStyle" onChange={(e) => props.setVillage(e.target.value)}></input>
 
                 <button className="registrationButton" onClick={() => props.setPopUp(false)}>Register</button>

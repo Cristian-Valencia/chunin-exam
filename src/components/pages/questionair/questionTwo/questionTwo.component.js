@@ -3,17 +3,17 @@ import './questionTwo.style.css';
 import AnswerButton from '../../../userInterface/answersButton/answerButton.component';
 import Question from "../../../userInterface/question/question.component";
 import Imagine from "../../../userInterface/imagine/imagine.component";
-import imageTwo from "../../../../images/madara.png";
+import imageTwo from "../../../../images/hidan.png";
 
 const QuestionTwo = () => {
 
     const path = '/questionThree'
 
-    const question = "who is the impostor?"
-    const answerA = "Sasori";
-    const answerB = "Madara";
-    const answerC = "Tobi";
-    const answerD = "Deidara";
+    const question = "What is the name of the religion I believe?"
+    const answerA = "Shintoism";
+    const answerB = "Confucionism";
+    const answerC = "Jashinism";
+    const answerD = "Christianism";
 
 
     return(

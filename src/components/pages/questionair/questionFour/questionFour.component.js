@@ -4,15 +4,16 @@ import { Link } from 'react-router-dom';
 import AnswerButton from '../../../userInterface/answersButton/answerButton.component';
 import Imagine from '../../../userInterface/imagine/imagine.component';
 import Question from "../../../userInterface/question/question.component";
+import imageFour from "../../../../images/deidara.png";
 
 const QuestionFour = () => {
 
     const path = "/questionFive";
-    const question = "This is Question 4?"
-    const answerA = "Naruto";
-    const answerB = "Saukura";
-    const answerC = "Sasuke";
-    const answerD = "Kakashi";
+    const question = "Who was my sensei from Iwagakure (Hidden Rock Village)?"
+    const answerA = "Ōnoki";
+    const answerB = "Tobirama Senju";
+    const answerC = "Mei Terumi";
+    const answerD = "Mū";
     
 
     return(
@@ -25,7 +26,7 @@ const QuestionFour = () => {
                 <AnswerButton path={path} answer={answerD} />
             </div>
 
-            <Imagine />
+            <Imagine imagine={imageFour} />
         </div>
     )
     

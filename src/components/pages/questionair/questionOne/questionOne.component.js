@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom';
 import AnswerButton from '../../../userInterface/answersButton/answerButton.component';
 import Imagine from '../../../userInterface/imagine/imagine.component';
 import Question from "../../../userInterface/question/question.component";
-import imageOne from "../../../../images/pain.png";
+import imageOne from "../../../../images/sasori.png";
 
 const QuestionOne = () => {
 
     const path = "/questionTwo";
-    const question = "What is my name?"
-    const answerA = "Naruto";
-    const answerB = "Saukura";
-    const answerC = "Sasuke";
-    const answerD = "Kakashi";
+    const question = "Who was the person i use as a puppet to fight?"
+    const answerA = "First Kazekage";
+    const answerB = "Second Kazekage";
+    const answerC = "Third Kazekage";
+    const answerD = "Fourth Kazekage";
     
 
     return(

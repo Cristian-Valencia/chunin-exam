@@ -4,26 +4,42 @@ import { Link } from 'react-router-dom';
 import AnswerButton from '../../../userInterface/answersButton/answerButton.component';
 import Imagine from '../../../userInterface/imagine/imagine.component';
 import Question from "../../../userInterface/question/question.component";
-import imageTwelve from "../../../../images/zetsu.png";
+import imageTwelve from "../../../../images/tobi.png";
 
 const QuestionTwelve = () => {
 
     const path = "/result";
     const question = "Who was the founder of Akatsuki?"
-    const answerA = "Me";
-    const answerB = "Kaguya Ōtsutstuki";
-    const answerC = "Yahiko";
-    const answerD = "Obito Uchiha";
+
+    let answerA = {
+        answer: 'Me',
+        isCorrect: false
+    }
+    
+    let answerB = {
+        answer: 'Kaguya Ōtsutsuki',
+        isCorret: true
+    }
+
+    let answerC = {
+        answer: 'Yahiko',
+        isCorrect: false
+    }
+
+    let answerD = {
+        answer: 'Obito Uchiha',
+        isCorrect: false
+    }
     
 
     return(
         <div className="questionOneContainer">
             <Question question={question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA} />
-                <AnswerButton path={path} answer={answerB} />
-                <AnswerButton path={path} answer={answerC} />
-                <AnswerButton path={path} answer={answerD} />
+                <AnswerButton path={path} answer={answerA.answer} />
+                <AnswerButton path={path} answer={answerB.answer} />
+                <AnswerButton path={path} answer={answerC.answer} />
+                <AnswerButton path={path} answer={answerD.answer} />
             </div>
 
             <Imagine imagine={imageTwelve} />

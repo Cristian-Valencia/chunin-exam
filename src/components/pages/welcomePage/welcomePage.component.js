@@ -21,7 +21,7 @@ const WelcomePage = (props) => {
 
                 {/* così si passa una proprietà ad un'altra proprietà: da un componente ad un altro componente */}
 
-                <NameFormModal setPopUp={setPopUp} setName={props.setName} setVillage={props.setVillage} />
+                <NameFormModal setPopUp={setPopUp} setName={props.setName} setVillage={props.setVillage} name={props.name} village={props.village}/>
 
                 <div className="welcomeContainer">
                     <h1 className="welcomeTitle">Welcome to</h1>

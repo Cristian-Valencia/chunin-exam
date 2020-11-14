@@ -10,20 +10,35 @@ const QuestionFour = () => {
 
     const path = "/questionFive";
     const question = "Who was my sensei from Iwagakure (Hidden Rock Village)?"
-    const answerA = "Ōnoki";
-    const answerB = "Tobirama Senju";
-    const answerC = "Mei Terumi";
-    const answerD = "Mū";
     
+    let answerA = {
+        answer: 'Ōnoki',
+        isCorrect: true
+    }
+    
+    let answerB = {
+        answer: 'Tobirama Senju',
+        isCorret: false
+    }
+
+    let answerC = {
+        answer: 'Mei Terumi',
+        isCorrect: false
+    }
+
+    let answerD = {
+        answer: 'Mū',
+        isCorrect: false
+    }
 
     return(
         <div className="questionOneContainer">
             <Question question={question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA} />
-                <AnswerButton path={path} answer={answerB} />
-                <AnswerButton path={path} answer={answerC} />
-                <AnswerButton path={path} answer={answerD} />
+                <AnswerButton path={path} answer={answerA.answer} />
+                <AnswerButton path={path} answer={answerB.answer} />
+                <AnswerButton path={path} answer={answerC.answer} />
+                <AnswerButton path={path} answer={answerD.answer} />
             </div>
 
             <Imagine imagine={imageFour} />

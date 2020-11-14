@@ -10,20 +10,36 @@ const QuestionSeven = () => {
 
     const path = "/questionEight";
     const question = "What's the name of the person I used for the Deva Path?"
-    const answerA = "Konan";
-    const answerB = "Jiraiya";
-    const answerC = "Kabuto";
-    const answerD = "Yahiko";
+
+    let answerA = {
+        answer: 'Konan',
+        isCorrect: false
+    }
+    
+    let answerB = {
+        answer: 'Jiraiya',
+        isCorret: false
+    }
+
+    let answerC = {
+        answer: 'Kabuto',
+        isCorrect: false
+    }
+
+    let answerD = {
+        answer: 'Yahiko',
+        isCorrect: true
+    }
     
 
     return(
         <div className="questionOneContainer">
             <Question question={question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA} />
-                <AnswerButton path={path} answer={answerB} />
-                <AnswerButton path={path} answer={answerC} />
-                <AnswerButton path={path} answer={answerD} />
+                <AnswerButton path={path} answer={answerA.answer} />
+                <AnswerButton path={path} answer={answerB.answer} />
+                <AnswerButton path={path} answer={answerC.answer} />
+                <AnswerButton path={path} answer={answerD.answer} />
             </div>
 
             <Imagine imagine={imageSeven} />

@@ -10,20 +10,36 @@ const QuestionNine = () => {
 
     const path = "/questionTen";
     const question = "Do you know in which land I grew up?"
-    const answerA = "Land of Fire";
-    const answerB = "Land of Water";
-    const answerC = "Land of Earth";
-    const answerD = "Unnamed";
+
+    let answerA = {
+        answer: 'Land of Fire',
+        isCorrect: false
+    }
+    
+    let answerB = {
+        answer: 'Land of Water',
+        isCorret: false
+    }
+
+    let answerC = {
+        answer: 'Land of Earth',
+        isCorrect: false
+    }
+
+    let answerD = {
+        answer: 'Unnamed',
+        isCorrect: true
+    }
     
 
     return(
         <div className="questionOneContainer">
             <Question question={question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA} />
-                <AnswerButton path={path} answer={answerB} />
-                <AnswerButton path={path} answer={answerC} />
-                <AnswerButton path={path} answer={answerD} />
+                <AnswerButton path={path} answer={answerA.answer} />
+                <AnswerButton path={path} answer={answerB.answer} />
+                <AnswerButton path={path} answer={answerC.answer} />
+                <AnswerButton path={path} answer={answerD.answer} />
             </div>
 
             <Imagine imagine={imageNine} />

@@ -34,7 +34,7 @@ function Pages() {
             <Switch>
           
                 <Route exact path="/">
-                    <WelcomePage setName={setName} setVillage={setVillage}/>
+                    <WelcomePage setName={setName} setVillage={setVillage} name={name} village={village}/>
                 </Route>
 
                 <Route exact path="/questionOne">

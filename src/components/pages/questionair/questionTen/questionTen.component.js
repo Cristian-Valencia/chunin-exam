@@ -10,20 +10,35 @@ const QuestionTen = () => {
 
     const path = "/questionEleven";
     const question = "What is the name of the Mother of Chakra?"
-    const answerA = "Hagoromo Ōtsutsuki";
-    const answerB = "Kaguya Ōtsutsuki";
-    const answerC = "Hamura Ōtsutstuki";
-    const answerD = "Momoshiki Ōtsutsuki";
     
+    let answerA = {
+        answer: 'Hagoromo Ōtsutsuki',
+        isCorrect: false
+    }
+    
+    let answerB = {
+        answer: 'Kaguya Ōtsutsuki',
+        isCorret: true
+    }
+
+    let answerC = {
+        answer: 'Hamura Ōtsutstuki',
+        isCorrect: false
+    }
+
+    let answerD = {
+        answer: 'Momoshiki Ōtsutsuki',
+        isCorrect: false
+    }
 
     return(
         <div className="questionOneContainer">
             <Question question={question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA} />
-                <AnswerButton path={path} answer={answerB} />
-                <AnswerButton path={path} answer={answerC} />
-                <AnswerButton path={path} answer={answerD} />
+                <AnswerButton path={path} answer={answerA.answer} />
+                <AnswerButton path={path} answer={answerB.answer} />
+                <AnswerButton path={path} answer={answerC.answer} />
+                <AnswerButton path={path} answer={answerD.answer} />
             </div>
 
             <Imagine imagine={imageTen} />

@@ -6,40 +6,27 @@ import Imagine from '../../../userInterface/imagine/imagine.component';
 import Question from "../../../userInterface/question/question.component";
 import imageThree from "../../../../images/kakuzu.png";
 
-const QuestionThree = () => {
+const QuestionThree = (props) => {
 
-    const path = "/questionFour";
-    const question = "Who was the very first Konoha shinobi I fought?"
-
-    let answerA = {
-        answer: 'Kakashi Hatake',
-        isCorrect: false
+    let questionData = {
+        answerA: 'Kakashi Hatake',
+        answerB: 'Naruto Uzumaki',
+        answerC: 'Hashirama Senju',
+        answerD: 'Tsunade Senju',
+        path: "/questionFour",
+        question: "Who was the very first Konoha shinobi I fought?"
     }
-    
-    let answerB = {
-        answer: 'Naruto Uzumaki',
-        isCorret: false
-    }
-
-    let answerC = {
-        answer: 'Hashirama Senju',
-        isCorrect: true
-    }
-
-    let answerD = {
-        answer: 'Tsunade Senju',
-        isCorrect: false
-    }
-    
 
     return(
         <div className="questionThreeContainer">
-            <Question question={question} />
+            <Question question={questionData.question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA.answer} />
-                <AnswerButton path={path} answer={answerB.answer} />
-                <AnswerButton path={path} answer={answerC.answer} />
-                <AnswerButton path={path} answer={answerD.answer} />
+                <AnswerButton path={questionData.path} answer={questionData.answerA} />
+                <AnswerButton path={questionData.path} answer={questionData.answerB} />
+                <div onClick={() => props.setScore(props.score + 1)}>
+                    <AnswerButton path={questionData.path} answer={questionData.answerC} />
+                </div>
+                <AnswerButton path={questionData.path} answer={questionData.answerD}  />
             </div>
 
             <Imagine imagine={imageThree} />

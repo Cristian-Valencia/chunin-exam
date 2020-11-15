@@ -6,40 +6,30 @@ import Imagine from '../../../userInterface/imagine/imagine.component';
 import Question from "../../../userInterface/question/question.component";
 import imageOne from "../../../../images/sasori.png";
 
-const QuestionOne = () => {
+const QuestionOne = (props) => {
 
-    const path = "/questionTwo";
-    const question = "Who was the person i use as a puppet to fight?"
-
-    let answerA = {
-        answer: 'First Kazekage',
-        isCorrect: false
+    let questionData = {
+        answerA: 'First Kazekage',
+        answerB: 'Second Kazekage',
+        answerC: 'Third Kazekage',
+        answerD: 'Fourth Kazekage',
+        path: "/questionTwo",
+        question: "Who was the person i use as a puppet to fight?"
     }
+
     
-    let answerB = {
-        answer: 'Second Kazekage',
-        isCorret: false
-    }
-
-    let answerC = {
-        answer: 'Third Kazekage',
-        isCorrect: true
-    }
-
-    let answerD = {
-        answer: 'Fourth Kazekage',
-        isCorrect: false
-    }
 
 
     return(
         <div className="questionOneContainer">
-            <Question question={question} />
-            <div className="answers">
-                <AnswerButton path={path} answer={answerA.answer} />
-                <AnswerButton path={path} answer={answerB.answer} />
-                <AnswerButton path={path} answer={answerC.answer} />
-                <AnswerButton path={path} answer={answerD.answer} />
+            <Question question={questionData.question} />
+            <div className="answers"> 
+                <AnswerButton path={questionData.path} answer={questionData.answerA} />
+                <AnswerButton path={questionData.path} answer={questionData.answerB} />
+                <div onClick={() => props.setScore(props.score + 1)}>
+                    <AnswerButton path={questionData.path} answer={questionData.answerC} />
+                </div>
+                <AnswerButton path={questionData.path} answer={questionData.answerD}  />
             </div>
 
             <Imagine imagine={imageOne} />

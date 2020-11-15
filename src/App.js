@@ -11,6 +11,7 @@ function App() {
   // qua si possono scrivere le variabili e le funzioni
 
   const [showLoadingPage,setShowLoadingPage]= useState(false);
+  const [score,setScore]=useState(0);
 
   
     useEffect(() => {
@@ -31,8 +32,8 @@ function App() {
       ?
       <div className="App">
         <Router>
-          <Navigation/>
-          <Pages/>
+          <Navigation score={score} setScore={setScore} />
+          <Pages score={score} setScore={setScore} />
           <Footer/>
         </Router>
       </div>

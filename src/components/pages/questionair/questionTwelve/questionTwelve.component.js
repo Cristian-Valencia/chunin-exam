@@ -6,43 +6,31 @@ import Imagine from '../../../userInterface/imagine/imagine.component';
 import Question from "../../../userInterface/question/question.component";
 import imageTwelve from "../../../../images/tobi.png";
 
-const QuestionTwelve = () => {
-
-    const path = "/result";
-    const question = "Who was the founder of Akatsuki?"
-
-    let answerA = {
-        answer: 'Me',
-        isCorrect: false
-    }
+const QuestionTwelve = (props) => {
     
-    let answerB = {
-        answer: 'Kaguya Ōtsutsuki',
-        isCorret: true
+    let questionData = {
+        answerA: 'Me',
+        answerB: 'Kaguya Ōtsutsuki',
+        answerC: 'Yahiko, Konan and Nagato',
+        answerD: 'Obito Uchiha',
+        path: "/result",
+        question: "Who was the founder of Akatsuki?"
     }
 
-    let answerC = {
-        answer: 'Yahiko',
-        isCorrect: false
-    }
-
-    let answerD = {
-        answer: 'Obito Uchiha',
-        isCorrect: false
-    }
-    
 
     return(
         <div className="questionOneContainer">
-            <Question question={question} />
+            <Question question={questionData.question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA.answer} />
-                <AnswerButton path={path} answer={answerB.answer} />
-                <AnswerButton path={path} answer={answerC.answer} />
-                <AnswerButton path={path} answer={answerD.answer} />
-            </div>
+            <AnswerButton path={questionData.path} answer={questionData.answerA} />
+                <AnswerButton path={questionData.path} answer={questionData.answerB} />
+                <div onClick={() => props.setScore(props.score + 1)}>
+                    <AnswerButton path={questionData.path} answer={questionData.answerC} />
+                </div>
+                <AnswerButton path={questionData.path} answer={questionData.answerD}  />
 
-            <Imagine imagine={imageTwelve} />
+                <Imagine imagine={imageTwelve} />
+            </div>
         </div>
     )
     

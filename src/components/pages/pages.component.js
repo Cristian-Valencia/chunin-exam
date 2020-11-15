@@ -17,10 +17,11 @@ import { Switch, Route } from 'react-router-dom';
 import Error from "./Error/error.component";
 
 
-function Pages() {
+function Pages(props) {
 
     const [name, setName] = useState(""); 
     const [village, setVillage] = useState("");
+    const [score, setScore] = useState(0);
     
     return (
         <div>
@@ -38,55 +39,55 @@ function Pages() {
                 </Route>
 
                 <Route exact path="/questionOne">
-                    <QuestionOne />
+                    <QuestionOne {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionTwo">
-                    <QuestionTwo />
+                    <QuestionTwo {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionThree">
-                    <QuestionThree />
+                    <QuestionThree {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionFour">
-                    <QuestionFour />
+                    <QuestionFour {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionFive">
-                    <QuestionFive />
+                    <QuestionFive {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionSix">
-                    <QuestionSix />
+                    <QuestionSix {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionSeven">
-                    <QuestionSeven />
+                    <QuestionSeven {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionEight">
-                    <QuestionEight />
+                    <QuestionEight {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionNine">
-                    <QuestionNine />
+                    <QuestionNine {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionTen">
-                    <QuestionTen />
+                    <QuestionTen {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionEleven">
-                    <QuestionEleven />
+                    <QuestionEleven {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/questionTwelve">
-                    <QuestionTwelve />
+                    <QuestionTwelve {props.score} {props.setScore} />
                 </Route>
 
                 <Route exact path="/result">
-                    <Result name={name} village={village} />
+                    <Result name={name} village={village} score={score} />
                 </Route>
 
                 <Route exact path="/*">

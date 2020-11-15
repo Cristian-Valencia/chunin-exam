@@ -8,7 +8,7 @@ const Result = (props) => {
             <div className="resultTitle">
 
                 <h1>You failed the exam {props.name} from the {props.village}</h1>
-                <h2>Your score is: 35%</h2>
+                <h2>Your score is: {props.score}</h2>
 
             </div>
 

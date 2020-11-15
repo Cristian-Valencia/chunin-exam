@@ -6,43 +6,29 @@ import Imagine from '../../../userInterface/imagine/imagine.component';
 import Question from "../../../userInterface/question/question.component";
 import imageEleven from "../../../../images/zetsu.png";
 
-const QuestionEleven = () => {
-
-    const path = "/questionTwelve";
-    const question = "What is the real name of our true Leader?"
-
-    let answerA = {
-        answer: 'Madara Uchiha',
-        isCorrect: false
-    }
+const QuestionEleven = (props) => {
     
-    let answerB = {
-        answer: 'Obito Uchiha',
-        isCorret: true
+    let questionData = {
+        answerA: 'Madara Uchiha',
+        answerB: 'Obito Uchiha',
+        answerC: 'Shisui Uchiha',
+        answerD: 'Itachi Uchiha',
+        path: "/questionTwelve",
+        question: "What is the real name of our true Leader?"
     }
-
-    let answerC = {
-        answer: 'Shisui Uchiha',
-        isCorrect: false
-    }
-
-    let answerD = {
-        answer: 'Itachi Uchiha',
-        isCorrect: false
-    }
-    
 
     return(
         <div className="questionOneContainer">
-            <Question question={question} />
+            <Question question={questionData.question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA.answer} />
-                <AnswerButton path={path} answer={answerB.answer} />
-                <AnswerButton path={path} answer={answerC.answer} />
-                <AnswerButton path={path} answer={answerD.answer} />
+                <AnswerButton path={questionData.path} answer={questionData.answerA} />
+                <div onClick={() => props.setScore(props.score + 1)}>
+                    <AnswerButton path={questionData.path} answer={questionData.answerB} />
+                </div>
+                <AnswerButton path={questionData.path} answer={questionData.answerC} />
+                <AnswerButton path={questionData.path} answer={questionData.answerD}  />
+                <Imagine imagine={imageEleven} />
             </div>
-
-            <Imagine imagine={imageEleven} />
         </div>
     )
     

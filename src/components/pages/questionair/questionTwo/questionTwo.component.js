@@ -5,43 +5,30 @@ import Question from "../../../userInterface/question/question.component";
 import Imagine from "../../../userInterface/imagine/imagine.component";
 import imageTwo from "../../../../images/hidan.png";
 
-const QuestionTwo = () => {
+const QuestionTwo = (props) => {
 
-    const path = '/questionThree'
-
-    const question = "What is the name of the religion I believe?"
-
-    let answerA = {
-        answer: 'Shintoism',
-        isCorrect: false
-    }
-    
-    let answerB = {
-        answer: 'Confucionism',
-        isCorret: false
-    }
-
-    let answerC = {
-        answer: 'Jashinism',
-        isCorrect: true
-    }
-
-    let answerD = {
-        answer: 'Christianism',
-        isCorrect: false
+    let questionData = {
+        answerA: 'Shintoism',
+        answerB: 'Confucionism',
+        answerC: 'Jashinism',
+        answerD: 'Christianism',
+        path: "/questionThree",
+        question: "What is the name of the religion I believe?"
     }
 
     return(
         <div className="questionTwoContainer">
-            <Question question={question} />
+            <Question question={questionData.question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA.answer} />
-                <AnswerButton path={path} answer={answerB.answer} />
-                <AnswerButton path={path} answer={answerC.answer} />
-                <AnswerButton path={path} answer={answerD.answer} />
-            </div>
+                <AnswerButton path={questionData.path} answer={questionData.answerA} />
+                <AnswerButton path={questionData.path} answer={questionData.answerB} />
+                <div onClick={() => props.setScore(props.score + 1)}>
+                    <AnswerButton path={questionData.path} answer={questionData.answerC} />
+                </div>
+                <AnswerButton path={questionData.path} answer={questionData.answerD}  />
 
-            <Imagine imagine={imageTwo} />
+                <Imagine imagine={imageTwo} />
+            </div>
         </div>
     )
     

@@ -6,39 +6,27 @@ import Imagine from '../../../userInterface/imagine/imagine.component';
 import Question from "../../../userInterface/question/question.component";
 import imageFour from "../../../../images/deidara.png";
 
-const QuestionFour = () => {
+const QuestionFour = (props) => {
 
-    const path = "/questionFive";
-    const question = "Who was my sensei from Iwagakure (Hidden Rock Village)?"
-    
-    let answerA = {
-        answer: 'Ōnoki',
-        isCorrect: true
-    }
-    
-    let answerB = {
-        answer: 'Tobirama Senju',
-        isCorret: false
-    }
-
-    let answerC = {
-        answer: 'Mei Terumi',
-        isCorrect: false
-    }
-
-    let answerD = {
-        answer: 'Mū',
-        isCorrect: false
+    let questionData = {
+        answerA: 'Ōnoki',
+        answerB: 'Tobirama Senju',
+        answerC: 'Mei Terumi',
+        answerD: 'Mū',
+        path: "/questionFive",
+        question: "Who was my sensei from Iwagakure (Hidden Rock Village)?"
     }
 
     return(
         <div className="questionOneContainer">
-            <Question question={question} />
+            <Question question={questionData.question} />
             <div className="answers">
-                <AnswerButton path={path} answer={answerA.answer} />
-                <AnswerButton path={path} answer={answerB.answer} />
-                <AnswerButton path={path} answer={answerC.answer} />
-                <AnswerButton path={path} answer={answerD.answer} />
+                <div onClick={() => props.setScore(props.score + 1)}>
+                    <AnswerButton path={questionData.path} answer={questionData.answerA} />
+                </div>
+                <AnswerButton path={questionData.path} answer={questionData.answerB} />
+                <AnswerButton path={questionData.path} answer={questionData.answerC} />
+                <AnswerButton path={questionData.path} answer={questionData.answerD}  />
             </div>
 
             <Imagine imagine={imageFour} />

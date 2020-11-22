@@ -21,7 +21,6 @@ function Pages(props) {
 
     const [name, setName] = useState(""); 
     const [village, setVillage] = useState("");
-    const [score, setScore] = useState(0);
     
     return (
         <div>
@@ -39,55 +38,55 @@ function Pages(props) {
                 </Route>
 
                 <Route exact path="/questionOne">
-                    <QuestionOne {props.score} {props.setScore} />
+                    <QuestionOne score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionTwo">
-                    <QuestionTwo {props.score} {props.setScore} />
+                    <QuestionTwo score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionThree">
-                    <QuestionThree {props.score} {props.setScore} />
+                    <QuestionThree score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionFour">
-                    <QuestionFour {props.score} {props.setScore} />
+                    <QuestionFour score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionFive">
-                    <QuestionFive {props.score} {props.setScore} />
+                    <QuestionFive score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionSix">
-                    <QuestionSix {props.score} {props.setScore} />
+                    <QuestionSix score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionSeven">
-                    <QuestionSeven {props.score} {props.setScore} />
+                    <QuestionSeven score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionEight">
-                    <QuestionEight {props.score} {props.setScore} />
+                    <QuestionEight score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionNine">
-                    <QuestionNine {props.score} {props.setScore} />
+                    <QuestionNine score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionTen">
-                    <QuestionTen {props.score} {props.setScore} />
+                    <QuestionTen score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionEleven">
-                    <QuestionEleven {props.score} {props.setScore} />
+                    <QuestionEleven score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/questionTwelve">
-                    <QuestionTwelve {props.score} {props.setScore} />
+                    <QuestionTwelve score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/result">
-                    <Result name={name} village={village} score={score} />
+                    <Result name={name} village={village} score={props.score} setScore={props.setScore} />
                 </Route>
 
                 <Route exact path="/*">

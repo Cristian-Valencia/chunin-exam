@@ -6,3 +6,10 @@
 img{
   max-width: 100%;
 }
+
+.productCard{
+  background: red;
+  color: white;
+  margin: 10px;
+  padding: 20px;
+}
